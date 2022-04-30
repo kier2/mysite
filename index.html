@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/light.css" id="theme-css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/project.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    <div class="color-switcher"><i class="fas fa-fill"></i>
+
+        <div class="color-options" id="themes">
+            <div class="color-options-item" data-theme="white"></div>
+            <div class="color-options-item" data-theme="green"></div>
+            <div class="color-options-item" data-theme="orange"></div>
+        </div>
+    </div>
+    <header class="page-header">
+        <nav class="navbar">
+            <a href="/" class="logo-wrapper">
+                <img class="light-logo" src="./img/kier-logo-black.svg" alt="logo">
+                <img class="dark-logo" src="./img/kier-logo-black-bg-white.svg" alt="logo">
+                <img class="dark-logo-2" src="./img/kier-logo-orange-green.svg" alt="logo">
+            </a>
+            <div class="menu-toggler">Menu</div>
+            
+            <div class="mobile-menu">
+                <div class="close-menu">&times;</div>
+                <ul class="navbar-menu">
+                    <li class="active"><a href="#">Home </a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="./project.html">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="intro sections light-bg">
+            <div class="intro-inner sections-inner">
+                <div class="col">
+                    <header class="intro-heading"><div class="separator"></div> <h6>Hi,</h6></header>
+                    <h1 class="intro-title">I’m <span class="colored-text">Kieren</span> Quimosquimos</h1>
+
+                    <div class="intro-desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus pariatur quasi deserunt a error ducimus nesciunt corporis eos odio qui!
+                    </div>
+                    <div class="cta">
+                        <a href="#" class="btn btn-primary">My Projects </a>
+                    </div>
+
+                    <div class="social-media-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-codepen"></i></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <img class="me-img" src="./img/me-with-shadow.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="about sections alt-bg">
+            <div class="about-inner sections-inner">
+                <div class="col about-intro">
+                    <h2 class="about-title heading">About Me</h2>
+                    <div class="separator"></div>
+
+                    <div class="about-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla soluta dolor amet quam vitae doloremque optio, consequuntur eligendi delectus adipisci cumque nihil id repudiandae illum atque quasi obcaecati natus maxime quae distinctio velit! Vero fugit labore eaque, temporibus natus expedita numquam quos, eos quod id at beatae harum voluptates necessitatibus?
+                    </div>
+                    <div class="cta">
+                        <a href="#" class="btn btn-primary">Contact Me</a>
+                    </div>
+
+                    <div class="social-media-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-codepen"></i></a>
+                    </div>
+                </div>
+                <div class="col tools-col">
+                    <h4>Tools Expertness</h4>
+
+                    <div class="tools">
+                        <div class="tools-item">
+                            <div class="tools-item-label">html</div>
+                            
+                        </div>
+                        <div class="tools-item">
+                            <div class="tools-item-label">css</div>
+                            
+                        </div>
+                        <div class="tools-item">
+                            <div class="tools-item-label">javascript</div>
+                            
+                        </div>
+                        <div class="tools-item">
+                            <div class="tools-item-label">php</div>
+                            
+                        </div>
+                        <div class="tools-item">
+                            <div class="tools-item-label">mysql</div>
+                            
+                        </div>
+                        <div class="tools-item">
+                            <div class="tools-item-label">wordpress</div>
+                        </div>
+                        <div class="tools-item">
+                            <div class="tools-item-label">jquery</div>
+                        </div>
+                        <div class="tools-item">
+                            <div class="tools-item-label">bootstrap</div>
+                        </div>
+                        <div class="tools-item">
+                            <div class="tools-item-label">woocommerce</div>
+                        </div>
+                        <div class="tools-item">
+                            <div class="tools-item-label">memberpress</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projects sections light-bg featured-projects">
+            <div class="projects-inner sections-inner">
+                <div class="title-box">
+                    <h2 class="heading">My Projects</h2>
+                    <div class="separator"></div>
+                </div>
+
+                <div class="projects-gallery" id="project-gallery">
+                </div>
+
+                <div class="cta">
+                    <a class="btn btn-primary" href="./project.html">View All Projects</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer alt-bg">
+        <section class="contact sections">
+            <div class="contact-inner sections-inner">
+                <div class="title-box">
+                <h2 class="contact-title heading">Get in Touch</h2>
+                <div class="separator"></div>
+                </div>
+
+                <div class="contact-details">
+                    <div class="contact-details-item">
+                        <div class="contact-details-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <a href="#" class="contact-details-link">+63 9165672362</a>
+                    </div>
+                    <div class="contact-details-item">
+                        <div class="contact-details-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <a href="#" class="contact-details-link">kierenquimosquimos@gmail.com</a>
+                    </div>
+                    <div class="contact-details-item">
+                        <div class="contact-details-icon">
+
+                            <i class="far fa-comment-alt"></i>
+                        </div>
+                        <a href="#" class="contact-details-link">chat with me </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="separator long"></div>
+        <section class="footer-bottom sections-inner">
+            <p>© <a href="./">kierdev.com</a> 2021. All rights reserved.</p>
+        </section>
+    </footer>
+
+    <script src="./js/navbar.js"></script>
+    <script src="./js/projects.js"></script>
+    <script src="./js/theme.js"></script>
+</body>
+</html>

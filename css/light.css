@@ -1,0 +1,17 @@
+:root{
+    --primary-color:#25BEC8;
+    --secondary-color:#F26707;
+    --light-color:#E0E5E9;
+    --alt-bg-color:#ffffff;
+    --text-light:#252328;
+    --defualt-shadow:#d3d3d3;
+}
+.light-logo{
+    display: block;
+}
+.dark-logo-2 {
+    display: none;
+}
+.dark-logo{
+    display: none;
+}
