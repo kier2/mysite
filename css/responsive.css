@@ -80,17 +80,20 @@
         margin-bottom: 6rem;
         z-index: 1001;
     }
+    .intro-inner .col:last-child{
+        display: none;
+    }
 }
 @media(max-width:767px){
+    .cta{
+        flex-direction: column;
+    }
     .projects-gallery {
         grid-template-columns: 1fr;
         justify-content: center;
     }
     .projects-gallery > article{
         min-height: 350px;
-    }
-    .intro-inner .col:last-child{
-        display: none;
     }
     .about-inner,
     .contact-inner .contact-details {

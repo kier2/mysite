@@ -1,5 +1,17 @@
 const projects = [
     {
+        title: 'Devifyverse',
+        img: './img/devifyverse.jpg',
+        tools: ['WordPress', 'CMS'],
+        link: 'https://www.devifyverse.site/',
+    },
+    {
+        title: 'Dumaguete Logistics Dispatchers',
+        img: './img/dld-website.jpg',
+        tools: ['WordPress', 'CMS'],
+        link: 'https://dldispatchers.com/',
+    },
+    {
         title: 'JD Site',
         img: './img/jd-site.png',
         tools: ['html','css','javascript'],
@@ -54,8 +66,14 @@ const projects = [
         link: 'https://codepen.io/codingkier/full/KKMjGXm'
     },
 ]
-const galleryWrapper = document.querySelector('#project-gallery')
 document.addEventListener('DOMContentLoaded', () => {
+    if(window.location.pathname === '/Portfolio/'){
+        galleryPage(document.querySelector('#project-gallery-home'))
+    }else {
+        galleryPage(document.querySelector('#project-gallery-project'))
+    }   
+})
+const galleryPage = function (galleryWrapper){
     projects.forEach((project, index) => {
         const article = document.createElement('article')
         const projectImgDiv = document.createElement('div')
@@ -71,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         projectToolsHeader.setAttribute('class', 'project-tools')
         projectLinks.setAttribute('class', 'btn')
         projectLinks.setAttribute('href', project.link)
+        projectLinks.setAttribute('target', '_blank')
 
         projectTitle.innerText = project.title
         projectToolsHeader.innerText = 'Tools'
@@ -88,22 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         projectContentInner.append(projectToolsHeader, projectLists, projectLinks)
         projectGalleryContent.append(projectTitle, projectContentInner)
-        // articleChild = `<div class="projects-gallery-item-img" ><img src="${project.img}"></div> <div class="project-gallery-item-content"> <h5 class="project-name">${project.title}</h5> <div class="project-content-inner"> <h6 class="project-tools">Tools</h6> ${getTools(projects, index)} <a class="btn" href="https://kier2.github.io/jd-site/">View Site <i class="fas fa-arrow-right"></i></a> </div> </div>`
+       
         article.append(projectImgDiv, projectGalleryContent)
         galleryWrapper.appendChild(article)
     })
-    
-})
-
-function getTools(obj, index){
-    const ul = document.createElement('ul')
-    for(let i = 0; i < obj[index].tools.length; i++){
-       const lis = '<li>'+ obj[index].tools[i] + '</li>'
-        // ul.append(lis)
-
-        return lis
-       
-    }
 }
-
 
