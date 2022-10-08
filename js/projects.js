@@ -67,11 +67,7 @@ const projects = [
     },
 ]
 document.addEventListener('DOMContentLoaded', () => {
-    if(window.location.pathname === '/mysite/'){
-        galleryPage(document.querySelector('#project-gallery-home'))
-    }else {
-        galleryPage(document.querySelector('#project-gallery-project'))
-    }   
+    galleryPage(document.querySelector('#project-gallery'))  
 })
 const galleryPage = function (galleryWrapper){
     projects.forEach((project, index) => {

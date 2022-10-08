@@ -312,8 +312,15 @@ h6{
     font-weight: 400;
 }
 
-.intro-inner .col:last-child > .me-img{
+/* .intro-inner .col:last-child > .me-img{
     width: 20rem;
+} */
+.me-img{
+    width: 20rem;
+    position: absolute;
+    right:14rem;
+    bottom:-30rem;
+    /* transform: translate(45rem, 7rem); */
 }
 /* Arrow */
 .about,

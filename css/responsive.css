@@ -80,7 +80,8 @@
         margin-bottom: 6rem;
         z-index: 1001;
     }
-    .intro-inner .col:last-child{
+    .intro-inner .col:last-child, 
+    .me-img{
         display: none;
     }
 }
