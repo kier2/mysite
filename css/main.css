@@ -9,3 +9,28 @@ html{
 body{
     font-family: 'Nunito', sans-serif;
 }
+
+.flip{
+    transform: scale(1);
+    animation: flip 1.5s forwards infinite alternate-reverse;
+}
+@keyframes flip {
+    from{
+        transform: rotate(0) translateX(0);
+    }
+    to{
+        transform: rotate(8deg) translateX(73px);
+    }
+}
+#fb-icon:hover{
+    transition: ease 400ms;
+    transform: translateX(-20px);
+}
+#twitter-icon:hover{
+    transition: ease 400ms;
+    transform: translateX(20px);
+}
+#linkedin-icon:hover{
+    transition: ease 400ms;
+    transform: translateY(20px);
+}
