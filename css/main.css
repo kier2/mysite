@@ -34,3 +34,16 @@ body{
     transition: ease 400ms;
     transform: translateY(20px);
 }
+#globe-group {
+    transform-origin: center;
+    animation: revolution 3s infinite forwards alternate-reverse;
+}
+
+@keyframes revolution {
+    from{
+        transform: translateX(-28px);
+    }
+    to{
+        transform: translateX(28px);
+    }
+}
