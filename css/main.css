@@ -38,7 +38,7 @@ body{
     transform-origin: center;
     animation: revolution 3s infinite forwards alternate-reverse;
 }
-
+/* this is for globe animation */
 @keyframes revolution {
     from{
         transform: translateX(-28px);
