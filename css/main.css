@@ -11,9 +11,43 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 
+:root{
+    --text-dark:#252328;
+}
+
+.text-dark{
+    color: var(--text-dark);
+}
+
 .flip{
     transform: scale(1);
     animation: flip 1.5s forwards infinite alternate-reverse;
+}
+
+.sidebar{
+    transform: translateX(100%);
+}
+.sidebar.inactive{
+    animation: slide-right 1s forwards;
+}
+.sidebar.active{
+    animation: slide-left 1s forwards;
+}
+@keyframes slide-left {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-0);
+    }
+}
+@keyframes slide-right {
+    0%{
+        transform: translateX(-0);
+    }
+    100%{
+        transform: translateX(100%);
+    }
 }
 @keyframes flip {
     from{

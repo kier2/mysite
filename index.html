@@ -14,28 +14,83 @@
 </head>
 <body class="bg-[#F3F7FA] overflow-x-auto">
     <main class="w-full">
-        <header class="page-header h-[6rem]">
-            <nav class="container w-9/12 mx-auto py-4">
-                <a href="/">
-                    <img class="w-16" src="./img/kier-logo-black-bg-balck.svg" alt="logo">
-                </a>
+        <header class="page-header h-[6rem] fixed w-full bg-[#fff] z-20 opacity-95">
+            <nav class="container w-9/12 mx-auto py-6 flex justify-between items-center">
+                <div>
+                    <a href="/">
+                        <img class="w-16" src="./img/kier-logo-black-bg-balck.svg" alt="logo">
+                    </a>
+                </div>
+
+                <div class="hidden md:block">
+                    <ul class="flex justify-between gap-16">
+                        <li>
+                            <a href="#about-me" class="capitalize text-dark">About me</a>
+                        </li>
+                        <li>
+                            <a href="#what-i-do" class="capitalize text-dark">What i do</a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="capitalize text-dark">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#contact-me" class="capitalize text-dark">Contact me</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <svg class="w-8 h-8 text-gray-800 block hover:text-[#25BEC8] cursor-pointer" id="menu-btn" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+                </svg>
             </nav>
         </header>
+
+        <div class="fixed w-full h-full z-50 bg-[#2f2e41] opacity-95 flex flex-col justify-center items-center sidebar" id="sidebar">
+
+            <div class="text-white text-[36px] absolute top-[30px] right-[30px]" id="close-btn"><i class="fa-regular fa-circle-xmark"></i></div>
+
+            <div class="block md:hidden">
+                <ul class="flex flex-col gap-8">
+                    <li>
+                        <a href="#about-me" class="capitalize text-white text-[24px]">About me</a>
+                    </li>
+                    <li>
+                        <a href="#what-i-do" class="capitalize text-white text-[24px]">What i do</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="capitalize text-white text-[24px]">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact-me" class="capitalize text-white text-[24px]">Contact me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Banner Section -->
         <section class="intro flex flex-col items-center justify-center">
-            <div class="container w-9/12 mx-auto">
+            <div class="container w-9/12 mx-auto mt-[5rem]">
                 <div class="flex lg:items-center py-16 mb-6 flex-col lg:flex-row gap-12 lg:gap-0">
                     <div class="flex-1 pr-30 lg:pr-40">
-                        <h1 class="text-[56px] leading-none font-bold mb-6 text-[#25BEC8] leading-tight">Crafting Engaging Web Experiences.</h1>
+                        <h1 class="md:text-[56px] text-[42px] leading-none font-bold mb-6 text-[#25BEC8] leading-tight">Crafting Engaging Web Experiences.</h1>
 
                         <h6 class="text-[20px] text-[#252328]">Elevating Digital Solutions</h6>
 
-                        <div class="my-10 flex gap-3">
-                            <a href="#what-i-do" class="bg-[#252328] rounded-full py-4 px-12 uppercase text-white font-semibold">What I Do</a>
-                            <a href="#projects" class="border-2 border-[#25BEC8] rounded-full py-4 px-12 uppercase font-semibold text-[#25BEC8] hover:bg-[#25BEC8] hover:text-white">Projects</a>
+                        <div class="my-10 flex gap-3 flex-col md:flex-row">
+                            <div>
+                                <a href="#what-i-do" class="bg-[#252328] rounded-full py-4 px-12 uppercase text-white font-semibold align-middle w-full md:w-auto block text-center">
+                                    What I Do <i class="ml-[5px] mt-1 fa-solid fa-chevron-right"></i>
+                                    
+                                 </a>
+                                 
+                            </div>
+                            <div>
+                                <a href="#projects" class="border-2 border-[#25BEC8] rounded-full py-4 px-12 uppercase font-semibold text-[#25BEC8] hover:bg-[#25BEC8] hover:text-white w-full md:w-auto block text-center">Projects <i class="ml-[5px] mt-1 fa-solid fa-arrow-right"></i></a>
+                            </div>
+                            
                         </div>
                         
                     </div>
-                    <div class="flex-1 flex justify-start">
+                    <div class="flex-1 flex justify-start p-0 md:py-6">
                         <!-- banner image -->
                         <svg width="100%" height="auto" viewBox="0 0 830 588" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1101_2)">
@@ -134,65 +189,82 @@
                 </div>
             </div>
         </section>
-        <section class="bg-white">
-            <div class="container w-full md:w-9/12 mx-auto">
-                <div class="flex justify-center items-center p-16 flex-col">
-                    <h3 class="text-[28px] font-bold text-center leading-tight mb-12 text-[#252328]">With over 3 years of experience as a skilled WordPress Developer, I specialize in creating visually stunning websites that leave a lasting impression.</h3>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" class="w-full lg:w-2/4" viewBox="0 0 823.23953 735.54047" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <section class="bg-white" id="about-me">
+            <div class="container w-full md:w-9/12 mx-auto flex items-center gap-10 md:flex-row flex-col">
+                <div class="flex justify-center items-center px-16 flex-col flex-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" class="w-full" viewBox="0 0 823.23953 735.54047" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g id="flip-card" class="flip">
                             <path d="M958.69312,482.97282,369.50873,735.0358a16.51867,16.51867,0,0,1-21.66-8.68L192.42164,363.05291a12.10184,12.10184,0,0,1,6.3588-15.86858l597.105-255.45154a12.31112,12.31112,0,0,1,16.14288,6.46929L967.37315,461.31279A16.51867,16.51867,0,0,1,958.69312,482.97282Z" transform="translate(-188.38023 -82.22977)" fill="#f2f2f2"/><path d="M931.44937,471.96945,382.3449,706.88557c-8.04931,3.44363-17.22127.11287-20.44591-7.42456L226.55112,383.09225c-2.39149-5.59.51531-12.214,6.48-14.76586L789.51739,130.25223c6.06362-2.59412,12.97442-.08152,15.40529,5.60051L940.19911,452.0545C943.42375,459.59193,939.49857,468.52586,931.44937,471.96945Z" transform="translate(-188.38023 -82.22977)" fill="#fff"/><path d="M812.54362,99.99072,193.01749,365.03441l-3.30415-7.72328a16.57377,16.57377,0,0,1,8.71566-21.72945L787.50463,83.56523a16.57368,16.57368,0,0,1,21.73484,8.7022Z" transform="translate(-188.38023 -82.22977)" fill="#25bec8"/><circle cx="27.40974" cy="259.52048" r="4.28342" fill="#fff"/><circle cx="42.35802" cy="253.12536" r="4.28342" fill="#fff"/><circle cx="57.3063" cy="246.73023" r="4.28342" fill="#fff"/><path d="M492.26816,446.007l-73.22891,31.32856a16.519,16.519,0,0,1-21.66-8.68l-40.42342-94.4877a16.519,16.519,0,0,1,8.68-21.66l73.2289-31.32855a16.519,16.519,0,0,1,21.66,8.68L500.9482,424.347A16.519,16.519,0,0,1,492.26816,446.007Z" transform="translate(-188.38023 -82.22977)" fill="#f2f2f2"/><path d="M616.17675,392.99683l-73.2289,31.32856a16.519,16.519,0,0,1-21.66-8.68l-40.42343-94.48769a16.519,16.519,0,0,1,8.68-21.66l73.22891-31.32855a16.519,16.519,0,0,1,21.66,8.68l40.42342,94.48769A16.519,16.519,0,0,1,616.17675,392.99683Z" transform="translate(-188.38023 -82.22977)" fill="#f2f2f2"/><path d="M740.08535,339.98665l-73.22913,31.32866a16.519,16.519,0,0,1-21.66-8.68l-40.42343-94.4877a16.519,16.519,0,0,1,8.68-21.66l73.22913-31.32865a16.519,16.519,0,0,1,21.66,8.68l40.42343,94.48769A16.519,16.519,0,0,1,740.08535,339.98665Z" transform="translate(-188.38023 -82.22977)" fill="#f2f2f2"/>
                         </g>
-                        <path d="M554.80812,592.191l-73.22891,31.32856a16.519,16.519,0,0,1-21.66-8.68l-40.42342-94.48769a16.519,16.519,0,0,1,8.68-21.66l73.2289-31.32855a16.519,16.519,0,0,1,21.66,8.68L563.48816,570.531A16.519,16.519,0,0,1,554.80812,592.191Z" transform="translate(-188.38023 -82.22977)" fill="#f2f2f2"/><path d="M678.71671,539.1808l-73.2289,31.32856a16.519,16.519,0,0,1-21.66-8.68l-40.42343-94.48769a16.519,16.519,0,0,1,8.68-21.66L625.3133,414.353a16.519,16.519,0,0,1,21.66,8.68l40.42342,94.48769A16.519,16.519,0,0,1,678.71671,539.1808Z" transform="translate(-188.38023 -82.22977)" fill="#f2f2f2"/><path d="M802.62531,486.17063l-73.22913,31.32865a16.519,16.519,0,0,1-21.66-8.68l-40.42343-94.4877a16.519,16.519,0,0,1,8.68-21.66l73.22913-31.32865a16.519,16.519,0,0,1,21.66,8.68l40.42343,94.48769A16.519,16.519,0,0,1,802.62531,486.17063Z" transform="translate(-188.38023 -82.22977)" fill="#f2f2f2"/><path d="M995.11977,817.77023H354.28126a16.51867,16.51867,0,0,1-16.5-16.5V406.11643a12.10185,12.10185,0,0,1,12.0879-12.08838H999.32265a12.31112,12.31112,0,0,1,12.29712,12.29736V801.27023A16.51867,16.51867,0,0,1,995.11977,817.77023Z" transform="translate(-188.38023 -82.22977)" fill="#e6e6e6"/><path d="M974.4,796.93791H377.15521c-8.755,0-15.87757-6.66992-15.87757-14.86816v-344.105c0-6.08008,5.278-11.02686,11.76563-11.02686H978.317c6.59522,0,11.96069,5.02832,11.96069,11.2085V782.06975C990.27764,790.268,983.15484,796.93791,974.4,796.93791Z" transform="translate(-188.38023 -82.22977)" fill="#fff"/><path d="M1011.39,408.17258H337.5497v-8.40039a16.57377,16.57377,0,0,1,16.56006-16.54981H994.83A16.57369,16.57369,0,0,1,1011.39,399.77219Z" transform="translate(-188.38023 -82.22977)" fill="#25bec8"/><circle cx="179.26482" cy="313.49262" r="4.28342" fill="#fff"/><circle cx="195.52363" cy="313.49262" r="4.28342" fill="#fff"/><circle cx="211.78243" cy="313.49262" r="4.28342" fill="#fff"/><rect x="450.20268" y="441.30559" width="324" height="41.02752" rx="20.51374" fill="#e6e6e6"/><rect x="450.20268" y="509.19439" width="324" height="41.02752" rx="20.51374" fill="#e6e6e6"/><rect x="450.20268" y="577.08318" width="324" height="41.02752" rx="20.51374" fill="#e6e6e6"/><path d="M611.97238,611.93791a110,110,0,1,1-110-110A110.03475,110.03475,0,0,1,611.97238,611.93791Z" transform="translate(-188.38023 -82.22977)" fill="#fff"/><path d="M552.81243,630.76c-1.20147,70.35088-105.847,70.33985-107.03823-.00226C446.97559,560.40911,551.62115,560.42014,552.81243,630.76Z" transform="translate(-188.38023 -82.22977)" fill="#25bec8"/><path d="M497.16883,652.596l-.05566-2c13.78447,1.84042,16.75312-15.24334,2.85156-8.85644l3.17334-23.19043,1.98145.27148-2.69922,19.72657C517.05748,636.36835,511.64336,654.59479,497.16883,652.596Z" transform="translate(-188.38023 -82.22977)" fill="#2f2e41"/><rect x="326.5386" y="538.29199" width="10.77148" height="2" fill="#2f2e41"/><rect x="292.5386" y="538.29199" width="10.77148" height="2" fill="#2f2e41"/><path d="M516.6423,705.58794c2.1001-14.17-14.48975-11.37-23.27-11.51a9.518,9.518,0,0,0-9.27979,11.5,52.0381,52.0381,0,0,0-18.49023,10.2,110.47619,110.47619,0,0,0,70.43018.78A51.77082,51.77082,0,0,0,516.6423,705.58794Z" transform="translate(-188.38023 -82.22977)" fill="#2f2e41"/><path d="M474.13161,605.44681c9.9184-5.73223,21.94644-1.3346,32.19177,1.06973,19.43829,5.9755,46.6969-1.50709,49.06067-24.66246,2.45987-21.53491-26.99912-33.5371-36.41493-12.10366l2.74162-.35832c-30.53675-45.38215-83.65461-43.661-83.30532,18.73141-.11322,1.92749,2.88716,1.921,2.99939-.00115-1.12422-36.76687,23.20862-61.89966,57.60511-38.27162,7.87161,5.74339,14.24117,13.35026,20.11041,21.05552,3.58221,4.01447,4.36067-13.27437,21.50583-8.746,18.86876,7.31,12.712,34.32848-4.15335,40.25979-20.83849,10.64622-43.40723-9.9954-63.8555.435a1.50174,1.50174,0,0,0,1.5143,2.59173Z" transform="translate(-188.38023 -82.22977)" fill="#2f2e41"/><path d="M501.97238,724.93791a112.90489,112.90489,0,1,1,34.98755-5.52685A112.72659,112.72659,0,0,1,501.97238,724.93791Zm0-220a107.01519,107.01519,0,1,0,107,107A107.12118,107.12118,0,0,0,501.97238,504.93791Z" transform="translate(-188.38023 -82.22977)" fill="#3f3d56"/></svg>
+                        <path d="M554.80812,592.191l-73.22891,31.32856a16.519,16.519,0,0,1-21.66-8.68l-40.42342-94.48769a16.519,16.519,0,0,1,8.68-21.66l73.2289-31.32855a16.519,16.519,0,0,1,21.66,8.68L563.48816,570.531A16.519,16.519,0,0,1,554.80812,592.191Z" transform="translate(-188.38023 -82.22977)" fill="#f2f2f2"/><path d="M678.71671,539.1808l-73.2289,31.32856a16.519,16.519,0,0,1-21.66-8.68l-40.42343-94.48769a16.519,16.519,0,0,1,8.68-21.66L625.3133,414.353a16.519,16.519,0,0,1,21.66,8.68l40.42342,94.48769A16.519,16.519,0,0,1,678.71671,539.1808Z" transform="translate(-188.38023 -82.22977)" fill="#f2f2f2"/><path d="M802.62531,486.17063l-73.22913,31.32865a16.519,16.519,0,0,1-21.66-8.68l-40.42343-94.4877a16.519,16.519,0,0,1,8.68-21.66l73.22913-31.32865a16.519,16.519,0,0,1,21.66,8.68l40.42343,94.48769A16.519,16.519,0,0,1,802.62531,486.17063Z" transform="translate(-188.38023 -82.22977)" fill="#f2f2f2"/><path d="M995.11977,817.77023H354.28126a16.51867,16.51867,0,0,1-16.5-16.5V406.11643a12.10185,12.10185,0,0,1,12.0879-12.08838H999.32265a12.31112,12.31112,0,0,1,12.29712,12.29736V801.27023A16.51867,16.51867,0,0,1,995.11977,817.77023Z" transform="translate(-188.38023 -82.22977)" fill="#e6e6e6"/><path d="M974.4,796.93791H377.15521c-8.755,0-15.87757-6.66992-15.87757-14.86816v-344.105c0-6.08008,5.278-11.02686,11.76563-11.02686H978.317c6.59522,0,11.96069,5.02832,11.96069,11.2085V782.06975C990.27764,790.268,983.15484,796.93791,974.4,796.93791Z" transform="translate(-188.38023 -82.22977)" fill="#fff"/><path d="M1011.39,408.17258H337.5497v-8.40039a16.57377,16.57377,0,0,1,16.56006-16.54981H994.83A16.57369,16.57369,0,0,1,1011.39,399.77219Z" transform="translate(-188.38023 -82.22977)" fill="#25bec8"/><circle cx="179.26482" cy="313.49262" r="4.28342" fill="#fff"/><circle cx="195.52363" cy="313.49262" r="4.28342" fill="#fff"/><circle cx="211.78243" cy="313.49262" r="4.28342" fill="#fff"/><rect x="450.20268" y="441.30559" width="324" height="41.02752" rx="20.51374" fill="#e6e6e6"/><rect x="450.20268" y="509.19439" width="324" height="41.02752" rx="20.51374" fill="#e6e6e6"/><rect x="450.20268" y="577.08318" width="324" height="41.02752" rx="20.51374" fill="#e6e6e6"/><path d="M611.97238,611.93791a110,110,0,1,1-110-110A110.03475,110.03475,0,0,1,611.97238,611.93791Z" transform="translate(-188.38023 -82.22977)" fill="#fff"/><path d="M552.81243,630.76c-1.20147,70.35088-105.847,70.33985-107.03823-.00226C446.97559,560.40911,551.62115,560.42014,552.81243,630.76Z" transform="translate(-188.38023 -82.22977)" fill="#25bec8"/><path d="M497.16883,652.596l-.05566-2c13.78447,1.84042,16.75312-15.24334,2.85156-8.85644l3.17334-23.19043,1.98145.27148-2.69922,19.72657C517.05748,636.36835,511.64336,654.59479,497.16883,652.596Z" transform="translate(-188.38023 -82.22977)" fill="#2f2e41"/><rect x="326.5386" y="538.29199" width="10.77148" height="2" fill="#2f2e41"/><rect x="292.5386" y="538.29199" width="10.77148" height="2" fill="#2f2e41"/><path d="M516.6423,705.58794c2.1001-14.17-14.48975-11.37-23.27-11.51a9.518,9.518,0,0,0-9.27979,11.5,52.0381,52.0381,0,0,0-18.49023,10.2,110.47619,110.47619,0,0,0,70.43018.78A51.77082,51.77082,0,0,0,516.6423,705.58794Z" transform="translate(-188.38023 -82.22977)" fill="#2f2e41"/><path d="M474.13161,605.44681c9.9184-5.73223,21.94644-1.3346,32.19177,1.06973,19.43829,5.9755,46.6969-1.50709,49.06067-24.66246,2.45987-21.53491-26.99912-33.5371-36.41493-12.10366l2.74162-.35832c-30.53675-45.38215-83.65461-43.661-83.30532,18.73141-.11322,1.92749,2.88716,1.921,2.99939-.00115-1.12422-36.76687,23.20862-61.89966,57.60511-38.27162,7.87161,5.74339,14.24117,13.35026,20.11041,21.05552,3.58221,4.01447,4.36067-13.27437,21.50583-8.746,18.86876,7.31,12.712,34.32848-4.15335,40.25979-20.83849,10.64622-43.40723-9.9954-63.8555.435a1.50174,1.50174,0,0,0,1.5143,2.59173Z" transform="translate(-188.38023 -82.22977)" fill="#2f2e41"/><path d="M501.97238,724.93791a112.90489,112.90489,0,1,1,34.98755-5.52685A112.72659,112.72659,0,0,1,501.97238,724.93791Zm0-220a107.01519,107.01519,0,1,0,107,107A107.12118,107.12118,0,0,0,501.97238,504.93791Z" transform="translate(-188.38023 -82.22977)" fill="#3f3d56"/>
+                    </svg>
+                </div>
+                <div class="flex-1 p-8">
+                    <h2 class="text-[36px] font-bold leading-tight mb-5 text-[#25BEC8]">
+                        About Me
+                    </h2>
+                    <p class="text-[#252328] leading-8">With over 4 years of experience as a skilled WordPress Developer, I specialize in creating visually stunning websites that leave a lasting impression. My expertise extends beyond design to include managing hosting environments, domain mapping, and improving email deliverability. Additionally, I have experience developing web applications with Laravel and working with AWS and FlyWP.</p>
+
+                    <div class="mt-12 mb-8">
+                        <a href="https://www.linkedin.com/in/kieren-quimosquimos/" target="_blank" class="bg-[#252328] rounded-full py-4 px-12 uppercase text-white font-semibold align-middle text-center">
+                            <span>Learn More <i class="ml-[5px] mt-1 fa-solid fa-arrow-right"></i></span>
+                         </a>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="bg-[#1A2529]" id="what-i-do">
             <div class="container w-full md:w-9/12 mx-auto">
                 <div class="py-16">
-                    <div class="w-full p-4 md:p-0 md:w-3/4 mb-12">
-                        <h2 class="text-[36px] font-bold leading-tight mb-2 text-[#25BEC8]">
+                    <div class="w-full p-4 md:p-0 md:w-2/4 mb-12 text-center mx-auto">
+                        <h2 class="text-[36px] font-bold leadin7 mb-7 text-[#25BEC8]">
                             What I Do
                         </h2>
-                        <h6 class="text-white leading-relaxed">By offering these comprehensive services, I am dedicated to providing you with top-notch solutions that enhance your online presence and propel your business forward.</h6>
+                        <h6 class="text-white leading-8">By delivering these comprehensive services, I am committed to enhancing your online presence with robust, high-performance solutions that drive your business forward.</h6>
                     </div>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 md:p-0">
                         <div class="bg-[#263237] text-white rounded-[20px] p-8 flex flex-col items-center items-center">
                             <img class="w-[6rem] mb-6" src="./img/developer.png" alt="">
-                            <p class="text-[14px] leading-relaxed text-center">
+                            <p class="text-[14px] leading-7 text-center">
                                 Customization of Existing WordPress Plugin and Theme: I excel in tailoring and customizing WordPress plugins and themes to meet your specific requirements, ensuring that your website stands out with a unique and personalized touch.
                             </p>
                         </div>
                         <div class="bg-[#263237] text-white rounded-[20px] p-8 flex flex-col items-center items-center">
                             <img class="w-[6rem] mb-6" src="./img/api.png" alt="">
-                            <p class="text-[14px] text-center leading-relaxed">
-                                Development of Custom Themes/Plugins: I have expertise in developing custom themes and plugins from scratch, providing you with a tailor-made solution that perfectly aligns with your vision and business needs.
+                            <p class="text-[14px] text-center leading-7">
+                                AWS & Lightsail Migration Expertise: I specialize in migrating websites to AWS and Lightsail, ensuring a seamless transition with optimized performance and reliability. My deep understanding of these platforms allows me to tailor your hosting environment to perfectly align with your business needs and vision.
                             </p>
                         </div>
                         <div class="bg-[#263237] text-white rounded-[20px] p-8 flex flex-col items-center items-center">
                             <img class="w-[6rem] mb-6" src="./img/plug-in.png" alt="">
-                            <p class="text-[14px] text-center leading-relaxed">
+                            <p class="text-[14px] text-center leading-7">
                                 Multisite Compatible Plugin Development: I possess the knowledge and experience to develop plugins that seamlessly integrate with WordPress multisite environments, allowing you to efficiently manage multiple websites from a single installation.
                             </p>
                         </div>
                         <div class="bg-[#263237] text-white rounded-[20px] p-8 flex flex-col items-center items-center">
                             <img class="w-[6rem] mb-6" src="./img/online-shop.png" alt="">
-                            <p class="text-[14px] text-center leading-relaxed">
+                            <p class="text-[14px] text-center leading-7">
                                 E-commerce Site Development with WooCommerce: I specialize in building powerful and scalable e-commerce websites using WooCommerce, enabling you to establish a robust online store that maximizes conversions and drives business growth.
                             </p>
                         </div>
                         <div class="bg-[#263237] text-white rounded-[20px] p-8 flex flex-col items-center items-center">
                             <img class="w-[6rem] mb-6" src="./img/troubleshooting.png" alt="">
-                            <p class="text-[14px] text-center leading-relaxed">
+                            <p class="text-[14px] text-center leading-7">
                                 Troubleshooting Website Issues: I am adept at identifying and resolving various website issues, including plugin/theme bugs, code bugs, and plugin/theme compatibility problems. I can swiftly troubleshoot and fix these issues to ensure smooth website functionality.
                             </p>
                         </div>
                         <div class="bg-[#263237] text-white rounded-[20px] p-8 flex flex-col items-center items-center">
                             <img class="w-[6rem] mb-6" src="./img/crm.png" alt="">
-                            <p class="text-[14px] text-center leading-relaxed">
+                            <p class="text-[14px] text-center leading-7">
                                 Integration of CRM with Gravity Forms: I offer seamless integration of Customer Relationship Management (CRM) systems with Gravity Forms, enabling you to streamline your lead generation and management processes efficiently.
                             </p>
                         </div>
+                    </div>
+
+                    <div class="mt-16 flex justify-center">
+                        <a href="mailto:kierenquimosquimos@gmail.com" class="bg-[#25BEC8] hover:opacity-80 rounded-full px-12 py-4 text-white font-semibold uppercase align-middle">
+                            Hit me up <i class="ml-[5px] mt-1 fa-regular fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -200,8 +272,8 @@
         <section class="bg-white" id="projects">
             <div class="container w-full md:w-9/12 mx-auto">
                 <div class="py-16 gap-12">
-                    <div class="text-center w-full p-4 md:p-0 md:w-3/5 mx-auto mb-6">
-                        <h2 class="text-[36px] font-bold leading-tight mb-5 text-[#25BEC8]">
+                    <div class="text-center w-full p-4 md:p-0 md:w-2/4 mx-auto mb-6">
+                        <h2 class="text-[36px] font-bold leading-8 mb-5 text-[#25BEC8]">
                             Selected Projects
                         </h2>
                         <h6 class="text-[#252328]">Below are some of the notable projects I've had the privilege to work on. Each project showcases my expertise in web development, meticulous attention to detail, and commitment to delivering exceptional results.</h6>
@@ -212,7 +284,9 @@
                                     
                             <div class="flex w-full justify-between items-center mt-4">
                                 <h5 class="text-[16px] font-bold leading-tight">Laravel Web App</h5>
-                                <a href="https://book.stickyricecookingschool.com.au/" class="bg-[#25BEC8] hover:opacity-80 rounded-full px-4 py-1 text-[13px] text-white font-semibold uppercase align-middle">View</a>
+                                <div>
+                                    <a href="https://book.stickyricecookingschool.com.au/" class="bg-[#25BEC8] hover:opacity-80 rounded-full px-4 py-2 text-[13px] text-white font-semibold uppercase align-middle">View</a>
+                                </div>
                             </div>
                         </div>
                         <div class="flex flex-col items-center bg-gray-100 p-3 rounded-xl shadow-md ease-in-out duration-200 hover:shadow-xl hover:translate-y-[-8px]">
@@ -220,7 +294,9 @@
                                     
                             <div class="flex w-full justify-between items-center mt-4">
                                 <h5 class="text-[16px] font-bold leading-tight">WordPress Site</h5>
-                                <a href="https://aphoboscrossfit.com/" class="bg-[#25BEC8] hover:opacity-80 rounded-full px-4 py-1 text-[13px] text-white font-semibold uppercase align-middle">View</a>
+                                <div>
+                                    <a href="https://aphoboscrossfit.com/" class="bg-[#25BEC8] hover:opacity-80 rounded-full px-4 py-2 text-[13px] text-white font-semibold uppercase align-middle">View</a>
+                                </div>
                             </div>
                         </div>
                         <div class="flex flex-col items-center bg-gray-100 p-3 rounded-xl shadow-md ease-in-out duration-200 hover:shadow-xl hover:translate-y-[-8px]">
@@ -228,19 +304,24 @@
                                     
                             <div class="flex w-full justify-between items-center mt-4">
                                 <h5 class="text-[16px] font-bold leading-tight">WordPress Site</h5>
-                                <a href="https://dldispatchers.com/" class="bg-[#25BEC8] hover:opacity-80 rounded-full px-4 py-1 text-[13px] text-white font-semibold uppercase align-middle">View</a>
+                                <div>   
+                                    <a href="https://dldispatchers.com/" class="bg-[#25BEC8] hover:opacity-80 rounded-full px-4 py-2 text-[13px] text-white font-semibold uppercase align-middle">View</a>
+                                </div> 
                             </div>
                         </div>
                     </div>
                     <div class="flex justify-center items-center mt-16">
-                        <a href="https://www.behance.net/kierenquimosquimos/" class="px-12 py-4 bg-[#252328] rounded-full text-white font-semibold hover:opacity-80 uppercase">All Projects</a>
+                        <a href="https://www.behance.net/kierenquimosquimos/" target="_blank" class="px-12 py-4 bg-[#252328] rounded-full text-white font-semibold hover:opacity-80 uppercase">
+                            All Projects
+                            <i class="ml-[5px] mt-1 fa-solid fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer class="w-full">
-        <section class="bg-[#000]">
+        <section class="bg-[#000]" id="contact-me">
             <div class="container w-full md:w-9/12 mx-auto">
                 <div class="flex items-center py-16 flex-col md:flex-wrap-reverse lg:flex-row gap-8 justify-between ">
                     <div class="flex-1">
@@ -287,10 +368,16 @@
                             <path d="M232 515.972H1.00001C0.734791 515.972 0.480421 515.867 0.292885 515.68C0.105348 515.492 7.62939e-06 515.238 7.62939e-06 514.972C7.62939e-06 514.707 0.105348 514.453 0.292885 514.265C0.480421 514.078 0.734791 513.972 1.00001 513.972H232C232.265 513.972 232.52 514.078 232.707 514.265C232.895 514.453 233 514.707 233 514.972C233 515.238 232.895 515.492 232.707 515.68C232.52 515.867 232.265 515.972 232 515.972Z" fill="#CCCCCC"/>
                         </svg>   
                     </div>
-                    <div class="flex-1">
-                        <h2 class="text-[36px] leading-tight font-bold mb-6 text-white">Let's Connect and Collaborate</h2>
+                    <div class="flex-1 p-6">
+                        <h2 class="text-[36px] leading-8 font-bold mb-6 text-white">Let's Connect and Collaborate</h2>
 
-                        <h6 class="text-[16px] text-gray-400 leading-relaxed">I am always excited to connect with fellow professionals, clients, and like-minded individuals. Whether you have a project in mind, want to discuss potential collaborations, or simply want to share ideas, I would love to hear from you. Feel free to reach out through the contact information provided below, and let's embark on a journey of creating exceptional web experiences together.</h6>
+                        <h6 class="text-[16px] text-gray-400 leading-8">I am always excited to connect with fellow professionals, clients, and like-minded individuals. Whether you have a project in mind, want to discuss potential collaborations, or simply want to share ideas, I would love to hear from you. Feel free to reach out through the contact information provided below, and let's embark on a journey of creating exceptional web experiences together.</h6>.
+
+                        <div class="mt-6">
+                            <a href="mailto:kierenquimosquimos@gmail.com" class="bg-[#25BEC8] hover:opacity-80 rounded-full px-12 py-4 text-white font-semibold uppercase align-middle">
+                                Email me <i class="ml-[5px] mt-1 fa-regular fa-envelope"></i>
+                            </a>
+                        </div>
 
                         <div class="my-10 flex items-center gap-2">
                             <div class="bg-white w-[2.5rem] h-[2.5rem] rounded-full p-2 flex items-center justify-center">
@@ -315,5 +402,6 @@
     </footer>
 
     <script src="./js/main.js"></script>
+    <script src="./js/sidebar.js"></script>
 </body>
 </html>
