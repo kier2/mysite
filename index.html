@@ -39,17 +39,17 @@
                     </ul>
                 </div>
                 
-                <svg class="w-8 h-8 text-gray-800 block hover:text-[#25BEC8] cursor-pointer" id="menu-btn" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <svg class="w-8 h-8 text-gray-800 block hover:text-[#25BEC8] cursor-pointer block md:hidden" id="menu-btn" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
                 </svg>
             </nav>
         </header>
 
-        <div class="fixed w-full h-full z-50 bg-[#2f2e41] opacity-95 flex flex-col justify-center items-center sidebar" id="sidebar">
+        <div class="fixed w-full h-full z-50 bg-[#2f2e41] opacity-95 flex flex-col justify-center items-center sidebar block md:hidden" id="sidebar">
 
             <div class="text-white text-[36px] absolute top-[30px] right-[30px]" id="close-btn"><i class="fa-regular fa-circle-xmark"></i></div>
 
-            <div class="block md:hidden">
+            <div class="">
                 <ul class="flex flex-col gap-8">
                     <li>
                         <a href="#about-me" class="capitalize text-white text-[24px]">About me</a>
